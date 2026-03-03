@@ -1,0 +1,97 @@
+#container-snackbars{
+	position:fixed;
+	bottom:24px; right:24px;
+	font-size:15px;
+	z-index:19000;
+	overflow:hidden;
+	width:350px;
+}
+#container-snackbars .snackbar{
+	-moz-user-select:none;
+	-webkit-user-select: none;
+	-ms-user-select:none;
+	-o-user-select:none;
+	user-select:none;
+
+	display: flex;
+	align-items: center;
+
+	box-sizing:border-box;
+	background-color: #2f2f36;
+	color:#f2f2ff;
+	padding: 14px 24px;
+	border-radius:2px;
+	position:relative;
+
+	left:0%;
+	max-height:200px;
+	min-height:60px;
+
+	box-shadow: rgba(0,0,0,0.3) 0px 1px 2px;
+	
+	
+	transition: all .25s;
+	opacity:0;
+	font-weight:500;
+	position:relative;
+	bottom:-100%;
+}
+#container-snackbars .snackbar.show{
+	opacity:1;
+	bottom:0px;
+}
+
+#container-snackbars .snackbar.snackbar-error{background-color:#a30922;color:#ffffff}
+#container-snackbars .snackbar.snackbar-success{background-color:#409955;color:#ffffff}
+
+
+#container-snackbars .snackbar-body{
+	flex-grow:5
+}
+#container-snackbars .snackbar-btn{
+	font-weight:bold;
+	font-size:90%;
+	padding: 10px;
+	border-radius:4px;
+	color:#8ab4f8;
+	text-decoration:none;
+	border:none;
+	background-color:transparent;
+	background-image:none !important;
+	box-shadow:none;
+	text-shadow:none;
+}
+#container-snackbars .snackbar-btn:hover{
+	cursor:pointer;
+	background-color:#27354e;
+}
+
+
+#container-snackbars .snackbar-btn-close{
+	width:32px;
+	height:32px;
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE5IDYuNDEgMTcuNTkgNSAxMiAxMC41OSA2LjQxIDUgNSA2LjQxIDEwLjU5IDEyIDUgMTcuNTkgNi40MSAxOSAxMiAxMy40MSAxNy41OSAxOSAxOSAxNy41OSAxMy40MSAxMnoiLz48L3N2Zz4=);
+	background-size: 24px 24px;
+	background-repeat:no-repeat;
+	background-position:center center;
+	display:inline-block;
+	vertical-align:middle;
+	margin:0 -12px 0 8px;
+	border-radius:40px;
+}
+#container-snackbars .snackbar-btn-close:hover{
+	cursor:pointer;
+	background-color:#4d4d50;
+	background-color:rgba(255,255,255,.15);
+}
+
+
+
+@media only screen and (max-width:401px){
+	#container-snackbars{
+		bottom:0px; left:0px;
+		width:100%;
+		padding: 16px 16px;
+		box-sizing: border-box;
+	}
+}
