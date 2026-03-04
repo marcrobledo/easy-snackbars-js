@@ -1,7 +1,7 @@
 /*
 * Easy Snackbars JS
 * Lightweight library to add snackbars to your websites and webapps
-* (last update: 2026-03-03)
+* (last update: 2026-03-04)
 * By Marc Robledo https://www.marcrobledo.com
 * Documentation and sourcecode: https://www.marcrobledo.com/easy-snackbars-js
 *
@@ -144,7 +144,7 @@ const EasySnackbars = (function () {
 		}
 
 		if (snackbarOptions.closable) {
-			const closeButton = document.createElement('span');
+			const closeButton = document.createElement('button');
 			closeButton.className = 'snackbar-btn-close';
 			closeButton.addEventListener('click', function () { _snackbarClose(snackbar); });
 			snackbar.appendChild(closeButton);
@@ -226,7 +226,7 @@ const EasySnackbars = (function () {
 			/* parse settings */
 			if (typeof settings === 'object') {
 				if (typeof settings.class === 'string'){
-					settings.class = settings.class.replace(/[^0-9a-zA-Z_\-]/g, '');
+					settings.class = settings.class.replace(/[^0-9a-zA-Z_\- ]/g, '').trim();
 					if(settings.class)
 						snackbarSettings.class = 'snackbar snackbar-' + settings.class;
 				}

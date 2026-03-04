@@ -48,18 +48,20 @@
 #container-snackbars .snackbar-body{
 	flex-grow:5
 }
+#container-snackbars button{
+	border:none;
+	background-color:transparent;
+	background-image:none;
+	box-shadow:none;
+	text-shadow:none;
+	text-decoration:none;
+}
 #container-snackbars .snackbar-btn{
 	font-weight:bold;
 	font-size:90%;
 	padding: 10px;
 	border-radius:4px;
 	color:#8ab4f8;
-	text-decoration:none;
-	border:none;
-	background-color:transparent;
-	background-image:none !important;
-	box-shadow:none;
-	text-shadow:none;
 }
 #container-snackbars .snackbar-btn:hover{
 	cursor:pointer;
